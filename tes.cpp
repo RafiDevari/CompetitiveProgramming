@@ -5,9 +5,14 @@
 using namespace std;
 
 int main(){
-    cout<<14/3<<endl;
+    int n=500;int x=3;
 
+    for (int i = 0; i < n; i++){
+        x=x*7;
+    }
 
+    cout << x<< endl;
+    
     
 
     
