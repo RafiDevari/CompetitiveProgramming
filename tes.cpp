@@ -5,15 +5,14 @@
 using namespace std;
 
 int main(){
-    int n=500;int x=3;
 
-    for (int i = 0; i < n; i++){
-        x=x*7;
-    }
 
-    cout << x<< endl;
+    int arr[3]={1,2,3};
+
+    cout<<upper_bound(arr,arr+3,2)-arr<<endl;
     
     
+
 
     
 }

@@ -3,6 +3,10 @@
     "files.associations": {
         "iostream": "cpp",
         "ostream": "cpp",
-        "algorithm": "cpp"
-    }
+        "algorithm": "cpp",
+        "cmath": "cpp",
+        "vector": "cpp",
+        "xtree": "cpp"
+    },
+    "C_Cpp.default.compilerPath": "d:\\Gabut\\C++\\tes.cpp"
 }
