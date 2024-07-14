@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <algorithm>
+#include <iomanip>
 
 using namespace std;
 
@@ -11,10 +12,10 @@ int main(){
     int x,y;
     cin >> x;
     y=x;
-    float arr[n]={};
-    float res[n]={};
-    float temp;
-    float hasil=0;
+    double arr[n]={};
+    double res[n]={};
+    double temp;
+    double hasil=0;
 
     for (int i=0;i<n;i++){
         cin>>arr[i];
@@ -50,19 +51,8 @@ int main(){
     
     
 
-    for (int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
-    }
-
-    cout<<endl;
-
-    for (int i=0;i<n;i++){
-        cout<<res[i]<<" ";
-    }
-
-    cout<<endl;
-
-    cout<<hasil<<endl;
+    
+    cout<< fixed << setprecision(5)<<hasil<<endl;
     
 
 
