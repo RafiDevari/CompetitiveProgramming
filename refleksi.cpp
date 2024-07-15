@@ -13,6 +13,8 @@ int main(){
     int matriks2[n][n]={};
     int temp[n][n]={};
 
+
+
     for (int i=0;i<n;i++){
         for (int j=0;j<n;j++){
             cin>>matriks1[i][j];
@@ -20,12 +22,33 @@ int main(){
     }
 
     cin>>n>>n;
+    
 
     for (int i=0;i<n;i++){
         for (int j=0;j<n;j++){
             cin>>matriks2[i][j];
         }
     }
+
+
+
+
+    if (matriks1[0][0]==matriks2[0][0] && matriks1[0][n-1]==matriks2[0][n-1] && matriks1[n-1][0]==matriks2[n-1][0] && matriks1[n-1][n-1]==matriks2[n-1][n-1] ){
+        for (int i = 0; i < n; i++){
+            for (int j = 0; j < n; j++){
+                if (matriks1[i][j]==matriks2[i][j]){
+                    continue;
+                }
+                else{
+                    goto endloop4;
+                }
+            }
+        }    
+        cout<<"identik"<<endl;
+        return 0;
+        endloop4:;
+    }
+   
 
     
     if (matriks1[0][0]==matriks2[n-1][0] && matriks1[0][n-1]==matriks2[n-1][n-1] && matriks1[n-1][0]==matriks2[0][0] && matriks1[n-1][n-1]==matriks2[0][n-1] ){
@@ -81,6 +104,7 @@ int main(){
     }
 
     if (matriks1[0][0]==matriks2[0][0] && matriks1[0][n-1]==matriks2[n-1][0] && matriks1[n-1][0]==matriks2[0][n-1] && matriks1[n-1][n-1]==matriks2[n-1][n-1] ){
+        
         for (int i = 0; i < n; i++){
             for (int j = 0; j < n; j++){
                 if (matriks1[i][j]==matriks2[j][i]){
@@ -94,27 +118,12 @@ int main(){
         cout<<"diagonal kanan bawah"<<endl;
         return 0;
         endloop3:;
-
-    }
-    if (matriks1[0][0]==matriks2[0][0] && matriks1[0][n-1]==matriks2[0][n-1] && matriks1[n-1][0]==matriks2[n-1][0] && matriks1[n-1][n-1]==matriks2[n-1][n-1] ){
-        for (int i = 0; i < n; i++){
-            for (int j = 0; j < n; j++){
-                if (matriks1[i][j]==matriks2[i][j]){
-                    continue;
-                }
-                else{
-                    goto endloop4;
-                }
-            }
-        }    
-        cout<<"identik"<<endl;
-        return 0;
-        endloop4:;
+        cout<<"tidak identik"<<endl;
     }
     else{
         cout<<"tidak identik"<<endl;
-        return 0;
     }
+    
     
     
         
